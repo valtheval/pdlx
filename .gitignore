@@ -1,0 +1,12 @@
+*.docx
+*.pdf
+*.pptx
+*.pyc
+*/.DS_Store
+src/.idea/*
+*.ipynb_checkpoints/*
+*.ipynb
+data/*
+DATAFORTEST/*
+.DS_Store
+src/fasttext_models/*
