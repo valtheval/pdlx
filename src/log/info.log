@@ -1,0 +1,563 @@
+2020-04-24 11:35:10,997 - __main__ - INFO - Hi, foo
+2020-04-24 11:39:58,988 - __main__ - INFO - Hi, foo
+2020-04-24 11:39:58,988 - modelling._model_manager - INFO - hello run manager
+2020-04-24 11:48:33,911 - __main__ - INFO - Hi, foo
+2020-04-24 11:48:33,912 - modelling._model_manager - INFO - Init a model manger
+2020-04-24 11:48:33,912 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/search_20200424114833912439
+2020-04-24 11:48:33,913 - modelling._model_manager - INFO - Saving experiment context
+2020-04-24 11:48:33,913 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-24 11:48:38,135 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-24 11:48:38,375 - modelling._model_manager - INFO - Init model
+2020-04-24 11:48:38,375 - modelling._model_manager - INFO - Perform grid search
+2020-04-24 11:49:28,599 - modelling._model_manager - INFO - Saving grid search results
+2020-04-24 11:49:28,601 - modelling._model_manager - INFO - Setting best parameters found in grid search
+2020-04-24 11:49:28,602 - modelling._model_manager - INFO - Evaluate model
+2020-04-24 11:49:37,237 - modelling._model_manager - INFO - Fit model on all data
+2020-04-24 11:49:52,959 - modelling._model_manager - INFO - Saving fitted model
+2020-04-24 12:04:53,994 - modelling._model_manager - INFO - Init a model manger
+2020-04-24 12:04:53,995 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/search_20200424120453994762
+2020-04-24 12:04:53,995 - modelling._model_manager - INFO - Saving experiment context
+2020-04-24 12:04:53,996 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-24 12:04:59,648 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-24 12:04:59,879 - modelling._model_manager - INFO - Init model
+2020-04-24 12:04:59,880 - modelling._model_manager - INFO - Perform grid search
+2020-04-24 12:07:56,608 - modelling._model_manager - INFO - Init a model manger
+2020-04-24 12:07:56,609 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/eval_20200424120756609184
+2020-04-24 12:07:56,609 - modelling._model_manager - INFO - Saving experiment context
+2020-04-24 12:07:56,610 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-24 12:08:00,769 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-24 12:08:00,990 - modelling._model_manager - INFO - Init model
+2020-04-24 12:08:00,991 - modelling._model_manager - INFO - Set model params
+2020-04-24 12:08:01,003 - modelling._model_manager - ERROR - Invalid parameter model for estimator Pipeline(memory=None,
+         steps=[('preprocessor',
+                 ColumnTransformer(n_jobs=None, remainder='drop',
+                                   sparse_threshold=0.3,
+                                   transformer_weights=None,
+                                   transformers=[('tfidf',
+                                                  TfidfVectorizer(analyzer='word',
+                                                                  binary=False,
+                                                                  decode_error='strict',
+                                                                  dtype=<class 'numpy.float64'>,
+                                                                  encoding='utf-8',
+                                                                  input='content',
+                                                                  lowercase=True,
+                                                                  max_df=1.0,
+                                                                  max_features=None,
+                                                                  min_df=1,
+                                                                  ngram_ra...
+                                            learning_rate=0.1, loss='deviance',
+                                            max_depth=3, max_features=None,
+                                            max_leaf_nodes=None,
+                                            min_impurity_decrease=0.0,
+                                            min_impurity_split=None,
+                                            min_samples_leaf=1,
+                                            min_samples_split=2,
+                                            min_weight_fraction_leaf=0.0,
+                                            n_estimators=100,
+                                            n_iter_no_change=None,
+                                            presort='deprecated',
+                                            random_state=None, subsample=1.0,
+                                            tol=0.0001, validation_fraction=0.1,
+                                            verbose=0, warm_start=False))],
+         verbose=False). Check the list of available parameters with `estimator.get_params().keys()`.
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 59, in run
+    model = self.set_model_params(model, params=conf_model["params"])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 15, in set_model_params
+    model.set_params(**params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/pipeline.py", line 163, in set_params
+    self._set_params('steps', **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/metaestimators.py", line 50, in _set_params
+    super().set_params(**params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/base.py", line 236, in set_params
+    (key, self))
+ValueError: Invalid parameter model for estimator Pipeline(memory=None,
+         steps=[('preprocessor',
+                 ColumnTransformer(n_jobs=None, remainder='drop',
+                                   sparse_threshold=0.3,
+                                   transformer_weights=None,
+                                   transformers=[('tfidf',
+                                                  TfidfVectorizer(analyzer='word',
+                                                                  binary=False,
+                                                                  decode_error='strict',
+                                                                  dtype=<class 'numpy.float64'>,
+                                                                  encoding='utf-8',
+                                                                  input='content',
+                                                                  lowercase=True,
+                                                                  max_df=1.0,
+                                                                  max_features=None,
+                                                                  min_df=1,
+                                                                  ngram_ra...
+                                            learning_rate=0.1, loss='deviance',
+                                            max_depth=3, max_features=None,
+                                            max_leaf_nodes=None,
+                                            min_impurity_decrease=0.0,
+                                            min_impurity_split=None,
+                                            min_samples_leaf=1,
+                                            min_samples_split=2,
+                                            min_weight_fraction_leaf=0.0,
+                                            n_estimators=100,
+                                            n_iter_no_change=None,
+                                            presort='deprecated',
+                                            random_state=None, subsample=1.0,
+                                            tol=0.0001, validation_fraction=0.1,
+                                            verbose=0, warm_start=False))],
+         verbose=False). Check the list of available parameters with `estimator.get_params().keys()`.
+2020-04-24 12:10:12,133 - modelling._model_manager - INFO - Init a model manger
+2020-04-24 12:10:12,135 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/eval_20200424121012133527
+2020-04-24 12:10:12,135 - modelling._model_manager - INFO - Saving experiment context
+2020-04-24 12:10:12,136 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-24 12:10:16,328 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-24 12:10:16,545 - modelling._model_manager - INFO - Init model
+2020-04-24 12:10:16,546 - modelling._model_manager - INFO - Set model params
+2020-04-24 12:10:16,556 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 59, in run
+    model = self.set_model_params(model, params=conf_model["params"])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 15, in set_model_params
+    model.set_params(**params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/pipeline.py", line 163, in set_params
+    self._set_params('steps', **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/metaestimators.py", line 50, in _set_params
+    super().set_params(**params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/base.py", line 236, in set_params
+    (key, self))
+ValueError: Invalid parameter model for estimator Pipeline(memory=None,
+         steps=[('preprocessor',
+                 ColumnTransformer(n_jobs=None, remainder='drop',
+                                   sparse_threshold=0.3,
+                                   transformer_weights=None,
+                                   transformers=[('tfidf',
+                                                  TfidfVectorizer(analyzer='word',
+                                                                  binary=False,
+                                                                  decode_error='strict',
+                                                                  dtype=<class 'numpy.float64'>,
+                                                                  encoding='utf-8',
+                                                                  input='content',
+                                                                  lowercase=True,
+                                                                  max_df=1.0,
+                                                                  max_features=None,
+                                                                  min_df=1,
+                                                                  ngram_ra...
+                                            learning_rate=0.1, loss='deviance',
+                                            max_depth=3, max_features=None,
+                                            max_leaf_nodes=None,
+                                            min_impurity_decrease=0.0,
+                                            min_impurity_split=None,
+                                            min_samples_leaf=1,
+                                            min_samples_split=2,
+                                            min_weight_fraction_leaf=0.0,
+                                            n_estimators=100,
+                                            n_iter_no_change=None,
+                                            presort='deprecated',
+                                            random_state=None, subsample=1.0,
+                                            tol=0.0001, validation_fraction=0.1,
+                                            verbose=0, warm_start=False))],
+         verbose=False). Check the list of available parameters with `estimator.get_params().keys()`.
+2020-04-24 12:11:15,046 - modelling._model_manager - INFO - Init a model manger
+2020-04-24 12:11:15,047 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/eval_20200424121115046649
+2020-04-24 12:11:15,047 - modelling._model_manager - INFO - Saving experiment context
+2020-04-24 12:11:15,047 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-24 12:11:20,476 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-24 12:11:20,784 - modelling._model_manager - INFO - Init model
+2020-04-24 12:11:20,785 - modelling._model_manager - INFO - Set model params
+2020-04-24 12:11:20,786 - modelling._model_manager - INFO - Evaluate model
+2020-04-24 12:13:11,948 - modelling._model_manager - INFO - Process completed with success
+2020-04-24 14:33:33,466 - modelling._model_manager - INFO - Init a model manger
+2020-04-24 14:33:33,467 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/eval_20200424143333467396
+2020-04-24 14:33:33,468 - modelling._model_manager - INFO - Saving experiment context
+2020-04-24 14:33:33,468 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-24 14:33:43,407 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-24 14:33:43,771 - modelling._model_manager - INFO - Init model
+2020-04-24 14:33:43,772 - modelling._model_manager - INFO - Set model params
+2020-04-24 14:33:43,773 - modelling._model_manager - INFO - Evaluate model
+2020-04-24 14:35:47,262 - modelling._model_manager - INFO - Process completed with success
+2020-04-24 14:41:32,357 - modelling._model_manager - INFO - Init a model manager
+2020-04-24 14:41:32,360 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/eval_20200424144132359728
+2020-04-24 14:41:32,360 - modelling._model_manager - INFO - Saving experiment context
+2020-04-24 14:41:32,361 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-24 14:41:40,558 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-24 14:41:40,912 - modelling._model_manager - INFO - Init model
+2020-04-24 14:41:40,913 - modelling._model_manager - INFO - Set model params
+2020-04-24 14:41:40,915 - modelling._model_manager - INFO - Evaluate model
+2020-04-24 14:42:09,255 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 74, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 47, in eval_model
+    model = self.fit_model(model, X_train, y_train)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 38, in fit_model
+    return model.fit(X, y)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/pipeline.py", line 354, in fit
+    self._final_estimator.fit(Xt, y, **fit_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/ensemble/_gb.py", line 1537, in fit
+    sample_weight_val, begin_at_stage, monitor, X_idx_sorted)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/ensemble/_gb.py", line 1594, in _fit_stages
+    random_state, X_idx_sorted, X_csc, X_csr)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/ensemble/_gb.py", line 1245, in _fit_stage
+    check_input=False, X_idx_sorted=X_idx_sorted)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/tree/_classes.py", line 1225, in fit
+    X_idx_sorted=X_idx_sorted)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/tree/_classes.py", line 367, in fit
+    builder.build(self.tree_, X, y, sample_weight, X_idx_sorted)
+KeyboardInterrupt
+2020-04-24 14:42:30,136 - modelling._model_manager - INFO - Init a model manager
+2020-04-24 14:42:30,137 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/eval_20200424144230137165
+2020-04-24 14:42:30,138 - modelling._model_manager - INFO - Saving experiment context
+2020-04-24 14:42:30,139 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-24 14:42:36,278 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-24 14:42:36,657 - modelling._model_manager - INFO - Init model
+2020-04-24 14:42:36,659 - modelling._model_manager - INFO - Set model params
+2020-04-24 14:42:36,662 - modelling._model_manager - INFO - Evaluate model
+2020-04-24 14:44:22,843 - modelling._model_manager - INFO - Process completed with success
+2020-04-28 17:22:44,876 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 17:22:44,877 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428172244876643
+2020-04-28 17:22:44,877 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 17:22:44,878 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 17:22:57,703 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 17:22:58,055 - modelling._model_manager - INFO - Init model
+2020-04-28 17:22:58,058 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 56, in run
+    model = self.init_model(conf_model["init_model"])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 87, in init_model
+    model = self.load_fitted_model(path)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 114, in load_fitted_model
+    return u.load_file(path_model)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/utils/utils.py", line 148, in load_file
+    obj = keras.models.load_model(path)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/engine/saving.py", line 492, in load_wrapper
+    return load_function(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/engine/saving.py", line 583, in load_model
+    with H5Dict(filepath, mode='r') as h5dict:
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/utils/io_utils.py", line 191, in __init__
+    self.data = h5py.File(path, mode=mode)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/h5py/_hl/files.py", line 408, in __init__
+    swmr=swmr)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiment/lstm_fc/20200428T132944Z-001/model_lstm_128_200_100.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+2020-04-28 17:24:40,714 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 17:24:40,715 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428172440715257
+2020-04-28 17:24:40,716 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 17:24:40,718 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 17:24:46,768 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 17:24:47,110 - modelling._model_manager - INFO - Init model
+2020-04-28 17:24:48,304 - modelling._model_manager - INFO - Evaluate model
+2020-04-28 17:24:48,311 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 68, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 36, in eval_model
+    res = mu.eval_model_returning_only_text_level_metrics(self, model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/utils_modelling.py", line 13, in eval_model_returning_only_text_level_metrics
+    model = manager.fit_model(model, X_train, y_train)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 28, in fit_model
+    fit_params = conf_model["fit_params"]
+KeyError: 'fit_params'
+2020-04-28 17:27:49,779 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 17:27:49,782 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428172749780789
+2020-04-28 17:27:49,783 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 17:27:49,784 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 17:27:57,907 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 17:27:58,486 - modelling._model_manager - INFO - Init model
+2020-04-28 17:28:01,223 - modelling._model_manager - INFO - Evaluate model
+2020-04-28 17:28:44,796 - modelling._keras_manager - INFO - Text to embeddings : (17659,)
+2020-04-28 17:28:53,960 - modelling._keras_manager - INFO - Padding sequence : (17659, 100, 300)
+2020-04-28 17:31:10,283 - modelling._keras_manager - INFO - Text to embeddings : (17659,)
+2020-04-28 17:31:15,740 - modelling._keras_manager - INFO - Padding sequence : (17659, 100, 300)
+2020-04-28 17:31:17,928 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 68, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 39, in eval_model
+    res = mu.eval_model_returning_only_text_level_metrics(self, model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/utils_modelling.py", line 16, in eval_model_returning_only_text_level_metrics
+    df = manager.make_prediction(model, X_train)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 43, in make_prediction
+    df = self.get_intermediaire_predictions(model, X)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 50, in get_intermediaire_predictions
+    proba = model.predict(X_seq)
+AttributeError: 'History' object has no attribute 'predict'
+2020-04-28 17:33:05,059 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 17:33:05,060 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428173305060195
+2020-04-28 17:33:05,061 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 17:33:05,062 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 17:33:11,844 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 17:33:12,145 - modelling._model_manager - INFO - Init model
+2020-04-28 17:33:13,377 - modelling._model_manager - INFO - Evaluate model
+2020-04-28 17:33:48,371 - modelling._keras_manager - INFO - Text to embeddings : (17659,)
+2020-04-28 17:33:53,700 - modelling._keras_manager - INFO - Padding sequence : (17659, 100, 300)
+2020-04-28 17:35:52,074 - modelling._keras_manager - INFO - Text to embeddings : (17659,)
+2020-04-28 17:35:57,233 - modelling._keras_manager - INFO - Padding sequence : (17659, 100, 300)
+2020-04-28 17:36:53,664 - modelling._keras_manager - INFO - Text to embeddings : (6420,)
+2020-04-28 17:36:56,096 - modelling._keras_manager - INFO - Padding sequence : (6420, 100, 300)
+2020-04-28 17:37:09,213 - modelling._model_manager - INFO - Process completed with success
+2020-04-28 17:48:14,558 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 17:48:14,560 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428174814559247
+2020-04-28 17:48:14,560 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 17:48:14,561 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 17:48:21,770 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 17:48:22,095 - modelling._model_manager - INFO - Init model
+2020-04-28 17:48:23,747 - modelling._model_manager - INFO - Evaluate model
+2020-04-28 17:48:23,753 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 68, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 40, in eval_model
+    res = mu.eval_model_returning_only_text_level_metrics(self, model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/utils_modelling.py", line 13, in eval_model_returning_only_text_level_metrics
+    if manager.is_fitted_:
+AttributeError: 'LSTMManager' object has no attribute 'is_fitted_'
+2020-04-28 17:49:15,365 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 17:49:15,365 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428174915365375
+2020-04-28 17:49:15,366 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 17:49:15,367 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 17:49:20,970 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 17:49:21,258 - modelling._model_manager - INFO - Init model
+2020-04-28 17:49:22,653 - modelling._model_manager - INFO - Evaluate model
+2020-04-28 17:50:02,795 - modelling._keras_manager - INFO - Text to embeddings : (17659,)
+2020-04-28 17:50:07,922 - modelling._keras_manager - INFO - Padding sequence : (17659, 100, 300)
+2020-04-28 17:51:08,346 - modelling._keras_manager - INFO - Text to embeddings : (6420,)
+2020-04-28 17:51:11,332 - modelling._keras_manager - INFO - Padding sequence : (6420, 100, 300)
+2020-04-28 17:51:26,609 - modelling._model_manager - INFO - Process completed with success
+2020-04-28 18:38:24,839 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 18:38:24,840 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428183824839964
+2020-04-28 18:38:24,840 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 18:38:24,841 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 18:38:32,196 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 18:38:32,540 - modelling._model_manager - INFO - Init model
+2020-04-28 18:38:34,157 - modelling._model_manager - INFO - Evaluate model
+2020-04-28 18:39:14,704 - modelling._keras_manager - INFO - Text to embeddings : (17659,)
+2020-04-28 18:39:21,712 - modelling._keras_manager - INFO - Padding sequence : (17659, 100, 300)
+2020-04-28 18:40:33,058 - modelling._keras_manager - INFO - Text to embeddings : (6420,)
+2020-04-28 18:40:35,593 - modelling._keras_manager - INFO - Padding sequence : (6420, 100, 300)
+2020-04-28 18:40:50,646 - modelling._model_manager - INFO - Process completed with success
+2020-04-28 20:11:31,578 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 20:11:31,579 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428201131578500
+2020-04-28 20:11:31,579 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 20:11:31,580 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 20:11:45,285 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 20:11:45,740 - modelling._model_manager - INFO - Init model
+2020-04-28 20:11:47,825 - modelling._model_manager - INFO - Evaluate model
+2020-04-28 20:12:30,660 - modelling._keras_manager - INFO - Text to embeddings : (17659,)
+2020-04-28 20:12:37,508 - modelling._keras_manager - INFO - Padding sequence : (17659, 100, 300)
+2020-04-28 20:13:42,854 - modelling._keras_manager - INFO - Text to embeddings : (6420,)
+2020-04-28 20:13:45,739 - modelling._keras_manager - INFO - Padding sequence : (6420, 100, 300)
+2020-04-28 20:14:00,611 - modelling._model_manager - INFO - Process completed with success
+2020-04-28 21:56:13,321 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 21:56:13,322 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/eval_20200428215613321771
+2020-04-28 21:56:13,323 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 21:56:13,324 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 21:56:20,508 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 21:56:20,840 - modelling._model_manager - INFO - Init model
+2020-04-28 21:56:22,123 - modelling._model_manager - INFO - Evaluate model
+2020-04-28 21:57:02,861 - modelling._keras_manager - INFO - Text to embeddings : (17659,)
+2020-04-28 21:57:08,256 - modelling._keras_manager - INFO - Padding sequence : (17659, 100, 300)
+2020-04-28 21:58:03,099 - modelling._keras_manager - INFO - Text to embeddings : (6420,)
+2020-04-28 21:58:05,156 - modelling._keras_manager - INFO - Padding sequence : (6420, 100, 300)
+2020-04-28 21:58:17,000 - modelling._model_manager - INFO - Process completed with success
+2020-04-28 23:54:54,743 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 23:54:54,744 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/search_20200428235454744177
+2020-04-28 23:54:54,745 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 23:54:54,747 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 23:55:01,501 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 23:55:01,780 - modelling._model_manager - INFO - Init model
+2020-04-28 23:55:01,782 - modelling._model_manager - INFO - Perform grid search
+2020-04-28 23:56:36,883 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/parallel.py", line 833, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/_parallel_backends.py", line 521, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/_base.py", line 430, in result
+    self._condition.wait(timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 296, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 60, in run
+    best_params, grid_search_result = self.grid_search(conf_model, model, X_train, y_train)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 34, in grid_search
+    gs.fit(X_train, y_train)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/model_selection/_search.py", line 710, in fit
+    self._run_search(evaluate_candidates)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/model_selection/_search.py", line 1151, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/model_selection/_search.py", line 689, in evaluate_candidates
+    cv.split(X, y, groups)))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/parallel.py", line 934, in __call__
+    self.retrieve()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/parallel.py", line 855, in retrieve
+    backend.abort_everything(ensure_ready=ensure_ready)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/_parallel_backends.py", line 538, in abort_everything
+    self._workers.shutdown(kill_workers=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/externals/loky/process_executor.py", line 1096, in shutdown
+    qmt.join()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 1044, in join
+    self._wait_for_tstate_lock()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 1060, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+2020-04-28 23:56:48,856 - modelling._model_manager - INFO - Init a model manager
+2020-04-28 23:56:48,857 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/search_20200428235648856884
+2020-04-28 23:56:48,857 - modelling._model_manager - INFO - Saving experiment context
+2020-04-28 23:56:48,858 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-28 23:56:55,062 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-28 23:56:55,364 - modelling._model_manager - INFO - Init model
+2020-04-28 23:56:55,366 - modelling._model_manager - INFO - Perform grid search
+2020-04-29 03:41:11,509 - modelling._model_manager - INFO - Saving grid search results
+2020-04-29 03:41:11,512 - modelling._model_manager - INFO - Setting best parameters found in grid search
+2020-04-29 03:41:11,513 - modelling._model_manager - INFO - Evaluate model
+2020-04-29 03:41:11,522 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 68, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 43, in eval_model
+    res = mu.eval_model_returning_only_text_level_metrics(self, model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/utils_modelling.py", line 14, in eval_model_returning_only_text_level_metrics
+    if manager.is_fitted_:
+AttributeError: 'TfidfGbmManager' object has no attribute 'is_fitted_'
+2020-04-29 09:28:30,142 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 09:28:30,143 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/tfidf_gbm/eval_20200429092830142790
+2020-04-29 09:28:30,143 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 09:28:30,144 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 09:28:39,212 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-29 09:28:39,554 - modelling._model_manager - INFO - Init model
+2020-04-29 09:28:39,558 - modelling._model_manager - INFO - Evaluate model
+2020-04-29 09:30:57,096 - modelling._model_manager - INFO - Process completed with success
+2020-04-29 15:03:50,878 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 15:03:50,879 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/nanc_acc_bowgbm/eval_20200429150350879123
+2020-04-29 15:03:50,880 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 15:03:50,881 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 15:04:01,153 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-29 15:04:01,833 - modelling._model_manager - INFO - Init model
+2020-04-29 15:04:01,836 - modelling._model_manager - INFO - Evaluate model
+2020-04-29 15:04:21,928 - modelling._model_manager - INFO - Process completed with success
+2020-04-29 15:56:27,328 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 15:56:27,330 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/nanc_conso_bowgbm/eval_20200429155627329363
+2020-04-29 15:56:27,330 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 15:56:27,331 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 15:56:32,920 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-29 15:56:33,226 - modelling._model_manager - INFO - Init model
+2020-04-29 15:56:33,229 - modelling._model_manager - INFO - Evaluate model
+2020-04-29 15:56:55,269 - modelling._model_manager - INFO - Process completed with success
+2020-04-29 16:02:33,058 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 16:02:33,059 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/nanc_conso_bowgbm/eval_20200429160233059203
+2020-04-29 16:02:33,059 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 16:02:33,060 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 16:02:36,773 - modelling._model_manager - INFO - Load original data from prepared data
+2020-04-29 16:02:37,005 - modelling._model_manager - INFO - Init model
+2020-04-29 16:02:37,007 - modelling._model_manager - INFO - Evaluate model
+2020-04-29 16:02:57,395 - modelling._model_manager - INFO - Process completed with success
+2020-04-29 17:32:24,919 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 17:32:24,921 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/prod_20200429173224920201
+2020-04-29 17:32:24,921 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 17:32:24,922 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 17:32:26,339 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 43, in run
+    self.save_info_dataset([X, conf_model["X_prod"]])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 135, in save_info_dataset
+    for dataset, path in info_datasets:
+ValueError: not enough values to unpack (expected 2, got 1)
+2020-04-29 17:33:22,653 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 17:33:22,655 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/prod_20200429173322653337
+2020-04-29 17:33:22,655 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 17:33:22,656 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 17:33:24,713 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 43, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 140, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:38:15,263 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 17:38:15,263 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/prod_20200429173815263424
+2020-04-29 17:38:15,264 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 17:38:15,264 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 17:38:17,198 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 43, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 140, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:39:03,492 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 17:39:03,493 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/prod_20200429173903492677
+2020-04-29 17:39:03,493 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 17:39:03,494 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 17:39:05,783 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 44, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 141, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:41:25,953 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 17:41:25,954 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/prod_20200429174125953901
+2020-04-29 17:41:25,954 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 17:41:25,955 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 17:41:28,176 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 43, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 143, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:42:43,331 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 17:42:43,331 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/prod_20200429174243331346
+2020-04-29 17:42:43,332 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 17:42:43,332 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 17:42:45,522 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 45, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 145, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:43:46,529 - modelling._model_manager - INFO - Init a model manager
+2020-04-29 17:43:46,530 - modelling._model_manager - INFO - Experience directory : /Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/lstm/prod_20200429174346529947
+2020-04-29 17:43:46,531 - modelling._model_manager - INFO - Saving experiment context
+2020-04-29 17:43:46,532 - modelling._model_manager - INFO - Load preprocessed data
+2020-04-29 17:43:47,981 - modelling._model_manager - INFO - Init model
+2020-04-29 17:43:49,144 - modelling._model_manager - INFO - Making predictions
+2020-04-29 17:44:19,445 - modelling._keras_manager - INFO - Text to embeddings : (7730,)
+2020-04-29 17:44:22,886 - modelling._keras_manager - INFO - Padding sequence : (7730, 100, 300)
+2020-04-29 17:44:37,653 - modelling._model_manager - INFO - Process completed with success

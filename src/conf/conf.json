@@ -1,0 +1,270 @@
+{
+  "conf_raw_data" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/dataprep/config_raw_data.json",
+  "paths" : {
+    "raw_data" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/raw_data/",
+    "formatted_data" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/formatted_data/",
+    "dataprep" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/dataprep/",
+    "models" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/",
+    "experiments" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiments/",
+    "preprocessed_data" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/preprocessed_data/"
+  },
+  "models" : {
+    "rule_base_classifier" : {
+      "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/rule_base_classifier/",
+      "grid_search" : {
+        "rule_size": [5],
+        "context_size":[5]
+      },
+      "learn" : "True",
+      "search" : "True",
+      "assess" : "False",
+      "preprocessing" : "False",
+      "verbose" : "True",
+      "date_target" : "date_accident"
+    },
+    "simple_embedding_and_ml" : {
+      "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/simple_embedding_and_ml/",
+      "verbose" : "True",
+      "context_size" : 15,
+      "date_target" : "date_accident",
+      "preprocessing_train" : "False",
+      "preprocessing_test" : "False",
+      "search" : "True",
+      "learn" : "False",
+      "assess" : "False",
+
+      "grid_search" : {
+        "use_tfidf" : ["True"],
+        "ml_model" : ["rf", "gbm"],
+        "bow" : {
+          "max_df" : [1.0],
+          "min_df" : [1, 5, 10]
+        },
+        "tfidf" : {
+          "norm" : ["l2"],
+          "use_idf" : ["True"]
+        },
+        "model" : {
+          "rf" : {
+            "n_estimators": [100, 200, 300],
+            "min_samples_split" : [2, 10]
+          },
+          "gbm" : {
+            "learning_rate": [0.1, 0.5],
+            "n_estimators" : [50, 100, 300],
+            "min_samples_split" : [2, 10]
+          }
+        }
+      }
+    },
+    "ml_model" : {
+      "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/ml/",
+      "verbose" : "True",
+      "context_size" : 10,
+      "text_preprocessing" : "fasttext",
+      "path_fasttext_model" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/fasttext_models/cc.fr.300.bin",
+      "doc2vec_strategy" : "mean",
+      "ml_model" : "gbm",
+      "date_target" : "date_accident",
+      "preprocessing_train" : "False",
+      "search" : "False",
+      "learn" : "False",
+      "assess" : "True",
+      "grid_search" : {
+        "preprocessor__textprep__bow__min_df" :[1, 5, 10, 20],
+        "model__learning_rate" : [0.05, 0.1, 0.17, 0.5],
+        "model__n_estimators" : [50, 100, 200, 300, 400, 500],
+        "model__min_samples_split" : [2, 10, 30, 50]
+      }
+    },
+    "ml_multi_classes" : {
+      "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/ml_multi_classes/",
+      "verbose" : "True",
+      "context_size" : 15,
+      "adjust_with_nanc_classifer" : "True",
+      "path_nan_classifier" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/na_nc_classifier/experiments/bow_gbm/fitted_model.pkl",
+      "preprocessing_train" : ["False", "False"],
+      "preprocessing_test" : ["True", "True"],
+
+      "pipeline" : ["tfidf", "gbm"],
+      "params" : {
+      },
+
+      "search_best_params" : "False",
+      "search_metric" : "balanced_accuracy",
+      "nb_fold" : 3,
+
+      "param_grid" : {
+        "preprocessor__textprep__tfidf__min_df" : [0.01, 0.05, 0.1],
+        "preprocessor__textprep__tfidf__max_df" : [1.0, 0.7, 0.5],
+        "preprocessor__textprep__tfidf__ngram_range" : ["(1,1)", "(2,2)", "(3,3)"],
+        "model__learning_rate" : [0.1, 0.2],
+        "model__n_estimators" : [300, 400, 500],
+        "model__min_samples_leaf" : [20, 40]
+      },
+      "assessing" : ["False", "False", "False"],
+      "nb_fold_assessing" : 4,
+      "th_nc_accident" : 0.08,
+      "th_nc_consolidation" : 0.1,
+      "th_na_consolidation" : 0.01
+    },
+    "na_nc_classifier" : {
+      "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/na_nc_classifier/",
+      "verbose" : "True",
+      "preprocessing" : "False",
+
+      "pipeline" : ["bow", "gbm"],
+      "params" : {
+        "bow__min_df" : 0.05,
+        "model__learning_rate" : 0.017,
+        "model__n_estimators" : 500,
+        "model__min_samples_split" : 50
+      },
+
+      "learning" : "True",
+
+      "search_best_params" : "False",
+      "search_metric" : "f1",
+      "nb_fold" : 5,
+      "param_grid" : {
+        "preprocessor__textprep__bow__min_df" : [1, 5, 10, 20],
+        "model__learning_rate" : [0.05, 0.1, 0.17],
+        "model__n_estimators" : [100, 200, 300, 500],
+        "model__min_samples_split" : [2, 10, 30]
+      },
+
+      "assessing" : "True",
+      "nb_fold_assessing" : 2
+    },
+    "gender_classifier" : {
+      "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/gender_classifier/",
+      "verbose" : "True",
+      "preprocessing" : "False",
+
+      "pipeline" : ["bow", "gbm"],
+      "params" : {
+      },
+
+      "search_best_params" : "False",
+      "search_metric" : "f1",
+      "nb_fold" : 5,
+
+      "param_grid" : {
+        "preprocessor__textprep__bow__min_df" : [1, 5, 10, 20],
+        "model__learning_rate" : [0.05, 0.1, 0.17],
+        "model__n_estimators" : [100, 200, 300, 500],
+        "model__min_samples_split" : [2, 10, 30]
+      },
+      "assessing" : "True",
+      "nb_fold_assessing" : 3
+    },
+    "bert_classifier" : {
+      "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/bert_classifier/",
+      "verbose" : "True",
+      "preprocessing" : "False",
+      "target" : "date_accident",
+      "epochs" : 2,
+      "batch_size" : 32,
+      "max_length_seq" : 64
+    },
+    "ml_multi_classes_ensembling" : {
+      "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/stacking_classifier/",
+      "verbose" : "True",
+      "context_size" : 15,
+      "adjust_with_nanc_classifer" : "False",
+      "path_nan_classifier" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/na_nc_classifier/experiments/bow_gbm/fitted_model.pkl",
+      "preprocessing_train" : ["False", "False"],
+      "preprocessing_test" : ["False", "False"],
+      "pipelines" : [
+        ["bow", "gbm"],
+        ["tfidf", "gbm"]
+      ],
+      "assessing" : ["True", "True", "True"],
+      "nb_fold_assessing" : 4,
+      "th_nc_accident" : 0.08,
+      "th_nc_consolidation" : 0.1,
+      "th_na_consolidation" : 0.01
+    },
+    "lstm" : {
+      "X_train" : "X_train_1l_per_date_sent_token.pkl",
+      "X_test" : "X_test_1l_per_date_sent_token.pkl",
+      "y_train" : "y_train_1l_per_date_sent_token.pkl",
+      "y_test" : "y_test_1l_per_date_sent_token.pkl",
+      "prepared_data" : "df_train_full.csv",
+      "init_model" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/model_lstm_128_300_100-265-0.87.h5",
+      "X_prod" : "X_prod_1l_per_date_sent_token.pkl",
+      "verbose" : "True",
+      "epochs" : 1,
+      "batch_size" : 128,
+      "max_length_seq" : 100,
+      "dropout" : 0.2
+    },
+    "bilstm" : {
+      "X_train" : "X_train_1l_per_date_sent_token.pkl",
+      "X_test" : "X_test_1l_per_date_sent_token.pkl",
+      "y_train" : "y_train_1l_per_date_sent_token.pkl",
+      "y_test" : "y_test_1l_per_date_sent_token.pkl",
+      "prepared_data" : "df_train_full.csv",
+      "init_model" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/models/model_lstm_128_300_100-265-0.87.h5",
+      "X_prod" : "X_prod_1l_per_date_sent_token.pkl",
+      "verbose" : "True",
+      "epochs" : 1,
+      "batch_size" : 128,
+      "max_length_seq" : 100,
+      "dropout" : 0.2
+    },
+    "tfidf_gbm": {
+      "X_train" : "X_train_1l_per_date_sent_token.pkl",
+      "X_test" : "X_test_1l_per_date_sent_token.pkl",
+      "y_train" : "y_train_1l_per_date_sent_token.pkl",
+      "y_test" : "y_test_1l_per_date_sent_token.pkl",
+      "X_prod" : "",
+      "prepared_data" : "df_train_full.csv",
+      "init_model" : {
+        "gbm__learning_rate": 0.2,
+        "gbm__min_samples_leaf": 40,
+        "gbm__n_estimators": 500,
+        "preprocessor__tfidf__max_df": 1.0,
+        "preprocessor__tfidf__min_df": 0.01,
+        "preprocessor__tfidf__ngram_range": "(1, 1)"
+      },
+      "param_grid" : {
+        "preprocessor__tfidf__min_df" : [0.01, 0.05, 0.1],
+        "preprocessor__tfidf__max_df" : [1.0, 0.7, 0.5],
+        "preprocessor__tfidf__ngram_range" : ["(1,1)", "(2,2)", "(3,3)"],
+        "gbm__learning_rate" : [0.1, 0.2],
+        "gbm__n_estimators" : [300, 400, 500],
+        "gbm__min_samples_leaf" : [20, 40]
+      },
+      "nb_fold" : 4
+    },
+    "nanc_acc_bowgbm" : {
+      "X_train" : "X_train_1l_per_text_for_nanc_clf.pkl",
+      "X_test" : "X_test_1l_per_text_for_nanc_clf.pkl",
+      "y_train" : "y_accident_train_1l_per_text_for_nanc_clf.pkl",
+      "y_test" : "y_accident_test_1l_per_text_for_nanc_clf.pkl",
+      "X_prod" : "",
+      "prepared_data" : "df_train_full.csv",
+      "init_model" : {
+        "preprocessor__bow__min_df" : 0.05,
+        "gbm__learning_rate" : 0.017,
+        "gbm__n_estimators" : 500,
+        "gbm__min_samples_split" : 50
+      }
+    },
+    "nanc_conso_bowgbm" : {
+      "X_train" : "X_train_1l_per_text_for_nanc_clf.pkl",
+      "X_test" : "X_test_1l_per_text_for_nanc_clf.pkl",
+      "y_train" : "y_accident_train_1l_per_text_for_nanc_clf.pkl",
+      "y_test" : "y_accident_test_1l_per_text_for_nanc_clf.pkl",
+      "X_prod" : "",
+      "prepared_data" : "df_train_full.csv",
+      "init_model" : {
+        "preprocessor__bow__min_df" : 0.05,
+        "gbm__learning_rate" : 0.017,
+        "gbm__n_estimators" : 500,
+        "gbm__min_samples_split" : 50
+      }
+    }
+  }
+}

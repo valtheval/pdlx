@@ -1,0 +1,316 @@
+2020-04-24 12:08:01,003 - modelling._model_manager - ERROR - Invalid parameter model for estimator Pipeline(memory=None,
+         steps=[('preprocessor',
+                 ColumnTransformer(n_jobs=None, remainder='drop',
+                                   sparse_threshold=0.3,
+                                   transformer_weights=None,
+                                   transformers=[('tfidf',
+                                                  TfidfVectorizer(analyzer='word',
+                                                                  binary=False,
+                                                                  decode_error='strict',
+                                                                  dtype=<class 'numpy.float64'>,
+                                                                  encoding='utf-8',
+                                                                  input='content',
+                                                                  lowercase=True,
+                                                                  max_df=1.0,
+                                                                  max_features=None,
+                                                                  min_df=1,
+                                                                  ngram_ra...
+                                            learning_rate=0.1, loss='deviance',
+                                            max_depth=3, max_features=None,
+                                            max_leaf_nodes=None,
+                                            min_impurity_decrease=0.0,
+                                            min_impurity_split=None,
+                                            min_samples_leaf=1,
+                                            min_samples_split=2,
+                                            min_weight_fraction_leaf=0.0,
+                                            n_estimators=100,
+                                            n_iter_no_change=None,
+                                            presort='deprecated',
+                                            random_state=None, subsample=1.0,
+                                            tol=0.0001, validation_fraction=0.1,
+                                            verbose=0, warm_start=False))],
+         verbose=False). Check the list of available parameters with `estimator.get_params().keys()`.
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 59, in run
+    model = self.set_model_params(model, params=conf_model["params"])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 15, in set_model_params
+    model.set_params(**params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/pipeline.py", line 163, in set_params
+    self._set_params('steps', **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/metaestimators.py", line 50, in _set_params
+    super().set_params(**params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/base.py", line 236, in set_params
+    (key, self))
+ValueError: Invalid parameter model for estimator Pipeline(memory=None,
+         steps=[('preprocessor',
+                 ColumnTransformer(n_jobs=None, remainder='drop',
+                                   sparse_threshold=0.3,
+                                   transformer_weights=None,
+                                   transformers=[('tfidf',
+                                                  TfidfVectorizer(analyzer='word',
+                                                                  binary=False,
+                                                                  decode_error='strict',
+                                                                  dtype=<class 'numpy.float64'>,
+                                                                  encoding='utf-8',
+                                                                  input='content',
+                                                                  lowercase=True,
+                                                                  max_df=1.0,
+                                                                  max_features=None,
+                                                                  min_df=1,
+                                                                  ngram_ra...
+                                            learning_rate=0.1, loss='deviance',
+                                            max_depth=3, max_features=None,
+                                            max_leaf_nodes=None,
+                                            min_impurity_decrease=0.0,
+                                            min_impurity_split=None,
+                                            min_samples_leaf=1,
+                                            min_samples_split=2,
+                                            min_weight_fraction_leaf=0.0,
+                                            n_estimators=100,
+                                            n_iter_no_change=None,
+                                            presort='deprecated',
+                                            random_state=None, subsample=1.0,
+                                            tol=0.0001, validation_fraction=0.1,
+                                            verbose=0, warm_start=False))],
+         verbose=False). Check the list of available parameters with `estimator.get_params().keys()`.
+2020-04-24 12:10:16,556 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 59, in run
+    model = self.set_model_params(model, params=conf_model["params"])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 15, in set_model_params
+    model.set_params(**params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/pipeline.py", line 163, in set_params
+    self._set_params('steps', **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/metaestimators.py", line 50, in _set_params
+    super().set_params(**params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/base.py", line 236, in set_params
+    (key, self))
+ValueError: Invalid parameter model for estimator Pipeline(memory=None,
+         steps=[('preprocessor',
+                 ColumnTransformer(n_jobs=None, remainder='drop',
+                                   sparse_threshold=0.3,
+                                   transformer_weights=None,
+                                   transformers=[('tfidf',
+                                                  TfidfVectorizer(analyzer='word',
+                                                                  binary=False,
+                                                                  decode_error='strict',
+                                                                  dtype=<class 'numpy.float64'>,
+                                                                  encoding='utf-8',
+                                                                  input='content',
+                                                                  lowercase=True,
+                                                                  max_df=1.0,
+                                                                  max_features=None,
+                                                                  min_df=1,
+                                                                  ngram_ra...
+                                            learning_rate=0.1, loss='deviance',
+                                            max_depth=3, max_features=None,
+                                            max_leaf_nodes=None,
+                                            min_impurity_decrease=0.0,
+                                            min_impurity_split=None,
+                                            min_samples_leaf=1,
+                                            min_samples_split=2,
+                                            min_weight_fraction_leaf=0.0,
+                                            n_estimators=100,
+                                            n_iter_no_change=None,
+                                            presort='deprecated',
+                                            random_state=None, subsample=1.0,
+                                            tol=0.0001, validation_fraction=0.1,
+                                            verbose=0, warm_start=False))],
+         verbose=False). Check the list of available parameters with `estimator.get_params().keys()`.
+2020-04-24 14:42:09,255 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 74, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 47, in eval_model
+    model = self.fit_model(model, X_train, y_train)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 38, in fit_model
+    return model.fit(X, y)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/pipeline.py", line 354, in fit
+    self._final_estimator.fit(Xt, y, **fit_params)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/ensemble/_gb.py", line 1537, in fit
+    sample_weight_val, begin_at_stage, monitor, X_idx_sorted)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/ensemble/_gb.py", line 1594, in _fit_stages
+    random_state, X_idx_sorted, X_csc, X_csr)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/ensemble/_gb.py", line 1245, in _fit_stage
+    check_input=False, X_idx_sorted=X_idx_sorted)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/tree/_classes.py", line 1225, in fit
+    X_idx_sorted=X_idx_sorted)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/tree/_classes.py", line 367, in fit
+    builder.build(self.tree_, X, y, sample_weight, X_idx_sorted)
+KeyboardInterrupt
+2020-04-28 17:22:58,058 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 56, in run
+    model = self.init_model(conf_model["init_model"])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 87, in init_model
+    model = self.load_fitted_model(path)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 114, in load_fitted_model
+    return u.load_file(path_model)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/utils/utils.py", line 148, in load_file
+    obj = keras.models.load_model(path)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/engine/saving.py", line 492, in load_wrapper
+    return load_function(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/engine/saving.py", line 583, in load_model
+    with H5Dict(filepath, mode='r') as h5dict:
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/keras/utils/io_utils.py", line 191, in __init__
+    self.data = h5py.File(path, mode=mode)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/h5py/_hl/files.py", line 408, in __init__
+    swmr=swmr)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/data/experiment/lstm_fc/20200428T132944Z-001/model_lstm_128_200_100.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+2020-04-28 17:24:48,311 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 68, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 36, in eval_model
+    res = mu.eval_model_returning_only_text_level_metrics(self, model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/utils_modelling.py", line 13, in eval_model_returning_only_text_level_metrics
+    model = manager.fit_model(model, X_train, y_train)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 28, in fit_model
+    fit_params = conf_model["fit_params"]
+KeyError: 'fit_params'
+2020-04-28 17:31:17,928 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 68, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 39, in eval_model
+    res = mu.eval_model_returning_only_text_level_metrics(self, model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/utils_modelling.py", line 16, in eval_model_returning_only_text_level_metrics
+    df = manager.make_prediction(model, X_train)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 43, in make_prediction
+    df = self.get_intermediaire_predictions(model, X)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 50, in get_intermediaire_predictions
+    proba = model.predict(X_seq)
+AttributeError: 'History' object has no attribute 'predict'
+2020-04-28 17:48:23,753 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 68, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_keras_manager.py", line 40, in eval_model
+    res = mu.eval_model_returning_only_text_level_metrics(self, model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/utils_modelling.py", line 13, in eval_model_returning_only_text_level_metrics
+    if manager.is_fitted_:
+AttributeError: 'LSTMManager' object has no attribute 'is_fitted_'
+2020-04-28 23:56:36,883 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/parallel.py", line 833, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/_parallel_backends.py", line 521, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/concurrent/futures/_base.py", line 430, in result
+    self._condition.wait(timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 296, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 60, in run
+    best_params, grid_search_result = self.grid_search(conf_model, model, X_train, y_train)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 34, in grid_search
+    gs.fit(X_train, y_train)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/model_selection/_search.py", line 710, in fit
+    self._run_search(evaluate_candidates)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/model_selection/_search.py", line 1151, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/model_selection/_search.py", line 689, in evaluate_candidates
+    cv.split(X, y, groups)))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/parallel.py", line 934, in __call__
+    self.retrieve()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/parallel.py", line 855, in retrieve
+    backend.abort_everything(ensure_ready=ensure_ready)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/_parallel_backends.py", line 538, in abort_everything
+    self._workers.shutdown(kill_workers=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/joblib/externals/loky/process_executor.py", line 1096, in shutdown
+    qmt.join()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 1044, in join
+    self._wait_for_tstate_lock()
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/threading.py", line 1060, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+2020-04-29 03:41:11,522 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 68, in run
+    res = self.eval_model(model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_sklearn_manager.py", line 43, in eval_model
+    res = mu.eval_model_returning_only_text_level_metrics(self, model, X_train, X_test, y_train, y_test, df_original)
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/utils_modelling.py", line 14, in eval_model_returning_only_text_level_metrics
+    if manager.is_fitted_:
+AttributeError: 'TfidfGbmManager' object has no attribute 'is_fitted_'
+2020-04-29 17:32:26,339 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 43, in run
+    self.save_info_dataset([X, conf_model["X_prod"]])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 135, in save_info_dataset
+    for dataset, path in info_datasets:
+ValueError: not enough values to unpack (expected 2, got 1)
+2020-04-29 17:33:24,713 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 43, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 140, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:38:17,198 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 43, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 140, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:39:05,783 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 44, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 141, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:41:28,176 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 43, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 143, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input
+2020-04-29 17:42:45,522 - modelling._model_manager - ERROR - Error in manager run
+Traceback (most recent call last):
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 45, in run
+    self.save_info_dataset([(X, conf_model["X_prod"])])
+  File "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/modelling/_model_manager.py", line 145, in save_info_dataset
+    sample = pd.DataFrame(dataset[0:5])
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py", line 488, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 169, in init_ndarray
+    values = prep_ndarray(values, copy=copy)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/internals/construction.py", line 295, in prep_ndarray
+    raise ValueError("Must pass 2-d input")
+ValueError: Must pass 2-d input

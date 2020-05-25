@@ -1,0 +1,25 @@
+{
+  "directory_raw_data" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/raw_data/",
+  "directory_raw_train_text" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/raw_data/train_folder/txt_files/",
+  "directory_raw_test_text" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/raw_data/test_folder/txt_files/",
+  "y_test_pred" : {
+    "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/raw_data/Y_test_pred.csv",
+    "sep" :  ",",
+    "encoding" : "utf-8"
+  },
+  "y_train_predilex" : {
+    "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/raw_data/Y_train_predilex.csv",
+    "sep" : ",",
+    "encoding" : "utf-8"
+  },
+  "x_train_ids" : {
+    "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/raw_data/train_folder/x_train_ids.csv",
+    "sep" : ",",
+    "encoding" : "utf-8"
+  },
+  "x_test_ids" : {
+    "path" : "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/raw_data/test_folder/x_test_ids.csv",
+    "sep" : ",",
+    "encoding" : "utf-8"
+  }
+}

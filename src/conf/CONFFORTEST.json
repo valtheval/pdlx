@@ -1,0 +1,29 @@
+{
+  "conf_raw_data": "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/src/dataprep/tests/config_raw_dataFORTEST.json",
+  "paths": {
+    "raw_data": "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/raw_data/",
+    "formatted_data": "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/formatted_data/",
+    "tmp_data": "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/tmp/",
+    "dataprep": "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/dataprep/",
+    "models": "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/models/"
+  },
+  "models": {
+    "rule_base_classifier": {
+      "path": "/Users/valentinmasdeu/Documents/8_Projets/PredilexChallenge/DATAFORTEST/models/rule_base_classifier/",
+      "grid_search": {
+        "rule_size": [
+          5
+        ],
+        "context_size": [
+          5
+        ]
+      },
+      "learn": "True",
+      "search": "True",
+      "assess": "False",
+      "preprocessing": "False",
+      "verbose": "True",
+      "date_target": "date_accident"
+    }
+  }
+}
